@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+a = list(range(1 , 1001, 2))
+for i in range(1, len(a)):
+    a[i] = a[i] ** 3
+summ = 0
+summ_all = 0
+for number in a:
+    num = number
+    while num > 0:
+        summ += num % 10
+        num = num // 10
+    if summ % 7 == 0:
+        summ_all += number
+    summ = 0
+print(summ_all)
+summ_all = 0
+for i in range(1, len(a)):
+    a[i] = a[i] + 17
+for number in a:
+    num = number
+    while num > 0:
+        summ += num % 10
+        num = num // 10
+    if summ % 7 == 0:
+        summ_all += number
+    summ = 0
+print(summ_all)
